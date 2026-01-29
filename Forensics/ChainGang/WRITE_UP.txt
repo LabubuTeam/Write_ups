@@ -11,11 +11,6 @@ Officer, Identify the Malware Family.
 we should look at the family labels
 
 
-
-PHOTO(1)
-
-
-
 answer: sodinokibi
 
 
@@ -25,19 +20,16 @@ This attack propagated via a malicious update from a legitimate IT management ve
 
 By doing a quick google serch we will know what was the neame of the comapny
 
-PHOTO(2)
-
 answer: Kaseya
 
 
 Forensics shows the malware side-loaded a malicious DLL using a legitimate Microsoft executable to bypass Defender. What is the filename of that legitimate executable?
 
 
-When we go to the Reltations Tab we should go to see the PE Resource Children
+When we go to the Reltations Tab we scroll down to see the PE Resource Children
 
 And we will find to files
 
-photo(3)
 
 
 wich are
@@ -78,42 +70,5 @@ Final Task. A 'Universal Master Decryptor Key' was eventually obtained. Provide 
 
 For the last question it was easeir to ask gemni or any other ai about it and the full key is "OgTD7co7NcYCoNj8NoYdPoR8nVFJBO5vs/kVkhelp2s="
 
-OgTD7co7
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+answer: "OgTD7co7"
 
