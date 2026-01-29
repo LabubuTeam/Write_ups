@@ -1,0 +1,194 @@
+Q1: What is the recipient's email address?
+
+Return-Path: <noreply@paypal-secure.com>
+Delivered-To: sarah.mitchell@techcorp.io
+Received: from mx2.techcorp.io
+
+from the first 3 lines we can know that the recipient is "sarah.mitchell@techcorp.io"
+
+Q2: What company/brand is being impersonated?
+
+in line 27 we can find this From: "PayPal Security Center" <service@paypal.com>
+
+wich leads us to "Paypal"
+
+Q3: What is the MIME boundary identifier?
+
+First we need to know what does MIME boundary identifier means
+
+
+
+MIME boundary identifier refers to a unique string used to separate distinct parts within a multipart MIME message.  It is defined in the Content-Type header of the message using the boundary parameter, such as boundary="----boundary_string". This identifier is crucial for structuring and parsing multipart content.
+
+Each part of the message begins with -- followed by the boundary string.
+The final part is terminated by the boundary string followed by --.
+The boundary string must not appear anywhere within the content of the message parts, as it serves as a delimiter.
+It must consist of ASCII characters, excluding spaces, control characters, and special characters like ()<>@,;:\\"[]?=.
+For example:
+
+Content-Type: multipart/mixed; boundary="----boundary_string"
+
+----boundary_string
+Content-Type: text/plain
+
+This is the first part.
+----boundary_string
+Content-Type: application/octet-stream
+
+Binary data...
+----boundary_string--
+
+
+after this example we can confdently say thst the answer is "------=_Part_67890_123456789.1735041165000"
+
+Q4: What is the X-Mailer header value?
+
+
+Just as before we need to ask our self what does X-Mailer header value mean?
+
+X-Mailer is an email header field that indicates the email client or software used to compose and send the message, along with its version number if available.
+
+It helps identify the origin of the email, such as Microsoft Outlook, Gmail, Apple Mail, or MailChimp.
+For example, an X-Mailer value like X-Mailer: MailChimp Mailer - CIDc40ee845e433f8bc0c14 reveals the email was sent via a MailChimp campaign.
+Note: While useful for identification, this header can be spoofed by malicious actors to mimic legitimate senders, so it should not be relied on as definitive proof of authenticity.
+
+
+
+we have the answer in line 35 "X-Mailer: MailChimp Spoof Engine v2.8"
+
+
+
+Q5: What timezone was the email sent from?
+
+
+ey Principle
+Email headers are read from bottom to top in terms of time flow.
+The last Received: header is actually the first hop — the original sender’s mail server.
+
+
+
+"Return-Path: <noreply@paypal-secure.com>
+Delivered-To: sarah.mitchell@techcorp.io
+Received: from mx2.techcorp.io (mx2.techcorp.io [10.50.2.15])
+	by mail.techcorp.io with ESMTP id z9si8765432qkm.200.2025.12.24.03.15.42
+	for <sarah.mitchell@techcorp.io>;
+	Tue, 24 Dec 2025 03:15:42 -0800 (PST)
+Received: from relay-smtp.cloudmailer.net (relay-smtp.cloudmailer.net [192.168.100.50])
+	by mx2.techcorp.io with ESMTPS id p5si7654321plq.150.2025.12.24.03.15.38
+	for <sarah.mitchell@techcorp.io>
+	(version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+	Tue, 24 Dec 2025 03:15:38 -0800 (PST)
+Received: from mail-out.shadyhost.ru (mail-out.shadyhost.ru [185.220.101.67])
+	by relay-smtp.cloudmailer.net with SMTP id k2mb9876543pld.100.2025.12.24.03.15.33
+	for <sarah.mitchell@techcorp.io>;
+	Tue, 24 Dec 2025 03:15:33 -0800 (PST)
+Received: from sender.phishkit.org ([103.94.108.25])
+	by mail-out.shadyhost.ru with ESMTP id n7si6543210qbt.50.2025.12.24.03.15.28;
+	Tue, 24 Dec 2025 14:15:28 +0300
+Received: from [103.94.108.25] (unknown [103.94.108.25])
+	by sender.phishkit.org (Postfix) with ESMTP id 4YzK3m0qRtz5yG;
+	Tue, 24 Dec 2025 14:15:15 +0300 (MSK)
+Authentication-Results: mx2.techcorp.io;
+	spf=fail (sender IP is 103.94.108.25) smtp.mailfrom=paypal.com smtp.helo=sender.phishkit.org;
+	dkim=fail reason="signature verification failed" header.d=paypal.com;
+	dmarc=fail action=quarantine header.from=paypal.com;"
+
+
+
+we can see that the time is Tue, 24 Dec 2025 14:15:15 +0300 (MSK)
+
+wich is is UTC + 3 = +0300
+
+"+0300"
+
+it is just diffrent forms to write the time zone
+
+
+
+Q6: What are the two suspicious transaction amounts? (format: XXX.XX,XXXX.XX)
+
+
+we can fin these vlaues in line 50 and 51
+
+"- $847.99 USD to merchant: "ELECTRONIC STORE LTD" - China
+- $1,250.00 USD to: "CRYPTO EXCHANGE PRO" - Nigeria"
+
+
+the answer is "847.99,1250.00"
+
+
+
+
+Q7: What is the primary malicious domain in the email body?
+
+
+"To restore full access to your account, please verify your identity immediately:
+https://paypal-secure-login.com/verify?session=a8f9e2d7c6b1"
+
+in line 53 and 54 we can find that the primary milcious email is "paypal-secure-login.com"
+
+Q8: What is the session/token parameter in the malicious URL?
+
+in line 54 we can find that the "https://paypal-secure-login.com/verify?session=a8f9e2d7c6b1"
+
+the session is session=a8f9e2d7c6b1
+
+the answer is "a8f9e2d7c6b1"
+
+Q9: What is the Message-ID domain?
+
+
+
+The domain part of a Message-ID (the portion after the @ symbol) identifies the originating mail server or system that generated the message.  It is a critical component for ensuring the globally unique nature of the identifier
+
+
+Service Provider: Domains like gmail.com, outlook.com, or amazonses.com identify the email service provider (e.g., Google, Microsoft, Amazon)
+
+
+in line 32 we have the answer "Message-ID: <20251224141245.F8A3E.67890@phishkit.org>"
+
+answer:"phishkit.org"
+
+
+Q10: How many hops did this email take?
+
+
+Each Received: header represents one hop where the email passed through a mail server.
+
+"Received: from mx2.techcorp.io (mx2.techcorp.io [10.50.2.15])
+	by mail.techcorp.io with ESMTP id z9si8765432qkm.200.2025.12.24.03.15.42
+	for <sarah.mitchell@techcorp.io>;
+	Tue, 24 Dec 2025 03:15:42 -0800 (PST)
+Received: from relay-smtp.cloudmailer.net (relay-smtp.cloudmailer.net [192.168.100.50])
+	by mx2.techcorp.io with ESMTPS id p5si7654321plq.150.2025.12.24.03.15.38
+	for <sarah.mitchell@techcorp.io>
+	(version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+	Tue, 24 Dec 2025 03:15:38 -0800 (PST)
+Received: from mail-out.shadyhost.ru (mail-out.shadyhost.ru [185.220.101.67])
+	by relay-smtp.cloudmailer.net with SMTP id k2mb9876543pld.100.2025.12.24.03.15.33
+	for <sarah.mitchell@techcorp.io>;
+	Tue, 24 Dec 2025 03:15:33 -0800 (PST)
+Received: from sender.phishkit.org ([103.94.108.25])
+	by mail-out.shadyhost.ru with ESMTP id n7si6543210qbt.50.2025.12.24.03.15.28;
+	Tue, 24 Dec 2025 14:15:28 +0300
+Received: from [103.94.108.25] (unknown [103.94.108.25])
+	by sender.phishkit.org (Postfix) with ESMTP id 4YzK3m0qRtz5yG;
+	Tue, 24 Dec 2025 14:15:15 +0300 (MSK)"
+
+Q11: Find the hidden email address in the Reply-To header (Base64).
+
+Reply-To header is an email header field that specifies where replies to an email should be sent, independent of the sender's address (From: field).  It ensures that when a recipient clicks "Reply," their response is automatically directed to the designated address, which can be different from the visible From address.
+
+
+base64: "c3VwcG9ydEBwYXlwYWwtc2VjdXJlLmNvbQ=="
+
+in line 28 we have found this "Reply-To: c3VwcG9ydEBwYXlwYWwtc2VjdXJlLmNvbQ==@notifications.sender.net"
+
+
+
+decoding the base 64 wil get us the answer "support@paypal-secure.com"
+
+
+
+
+

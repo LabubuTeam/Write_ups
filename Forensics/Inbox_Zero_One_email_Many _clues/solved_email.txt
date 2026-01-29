@@ -1,0 +1,70 @@
+=== Email Forensics Challenge ===
+You have 3 attempts per question.
+Fail a question and the challenge ends.
+
+Q1: What is the recipient's email address?
+> from mx2.techcorp.io
+❌ Incorrect. Attempts left: 2
+
+Q1: What is the recipient's email address?
+> sarah.mitchell@techcorp.io
+✅ Correct!
+
+Q2: What company/brand is being impersonated?
+> techcorp
+❌ Incorrect. Attempts left: 2
+
+Q2: What company/brand is being impersonated?
+> PayPal
+✅ Correct!
+
+Q3: What is the MIME boundary identifier?
+> ----=_Part_67890_123456789.1735041165000
+✅ Correct!
+
+Q4: What is the X-Mailer header value?
+> MailChimp Spoof Engine v2.8
+✅ Correct!
+
+Q5: What timezone was the email sent from?
+> Date: Tue, 24 Dec 2025 14:12:45 +0300
+❌ Incorrect. Attempts left: 2
+
+Q5: What timezone was the email sent from?
+> UTC+3
+❌ Incorrect. Attempts left: 1
+
+Q5: What timezone was the email sent from?
+> +0300
+✅ Correct!
+
+Q6: What are the two suspicious transaction amounts? (format: XXX.XX,XXXX.XX)
+> 847.99,1250.00
+✅ Correct!
+
+Q7: What is the primary malicious domain in the email body?
+> paypal-secure-login.com
+✅ Correct!
+
+Q8: What is the session/token parameter in the malicious URL?
+> a8f9e2d7c6b1
+✅ Correct!
+
+Q9: What is the Message-ID domain?
+> phishkit.org
+✅ Correct!
+
+Q10: How many hops did this email take?
+> 5
+✅ Correct!
+
+Q11: Find the hidden email address in the Reply-To header (Base64).
+> c3VwcG9ydEBwYXlwYWwtc2VjdXJlLmNvbQ==
+❌ Incorrect. Attempts left: 2
+
+Q11: Find the hidden email address in the Reply-To header (Base64).
+> support@paypal-secure.com
+✅ Correct!
+
+🎉 All questions answered correctly!
+FLAG: b'PlaygroundsCTF{3m41l_f0r3n51c5_m4573r_vprfzc6e}'
