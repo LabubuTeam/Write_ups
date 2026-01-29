@@ -1,27 +1,26 @@
- @zxc � nc challenges.cscpsut.com 10451
 Officer, Identify the Malware Family.
 Your answer: sodinokibi
-Correct! ✅ Moving to the next question.
+Correct! âœ… Moving to the next question.
 
 This attack propagated via a malicious update from a legitimate IT management vendor. What is the Name of the Company whose software was exploited?
 Your answer: Kaseya
-Correct! ✅ Moving to the next question.
+Correct! âœ… Moving to the next question.
 
 Forensics shows the malware side-loaded a malicious DLL using a legitimate Microsoft executable to bypass Defender. What is the filename of that legitimate executable?
 Your answer: MsMpEng.exe
-Correct! ✅ Moving to the next question.
+Correct! âœ… Moving to the next question.
 
 Intelligence confirms they used an Authentication Bypass Zero-Day. What is the CVE ID assigned to this specific vulnerability?
 Your answer: CVE-2021-30116
-Correct! ✅ Moving to the next question.
+Correct! âœ… Moving to the next question.
 
 The gang demanded a record-breaking lump sum to unlock all victims at once. According to news reports, what was the highest amount (in Millions) demanded?
 Your answer: 70
-Correct! ✅ Moving to the next question.
+Correct! âœ… Moving to the next question.
 
 Final Task. A 'Universal Master Decryptor Key' was eventually obtained. Provide the first 8 characters of that key.
 Your answer: OgTD7co7
-Correct! ✅ Moving to the next question.
+Correct! âœ… Moving to the next question.
 
-Good Job! You answered all questions correctly! 🔥 Here is your flag: PlaygroundsCTF{REv1l_Supply_Ch41n_D3cryp7ed_4tb5g8hm}
+Good Job! You answered all questions correctly! ðŸ”¥ Here is your flag: PlaygroundsCTF{REv1l_Supply_Ch41n_D3cryp7ed_4tb5g8hm}
 
