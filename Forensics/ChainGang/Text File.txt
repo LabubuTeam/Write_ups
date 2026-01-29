@@ -1,0 +1,8 @@
+ChainGang
+
+CYBER CRIMES UNIT URGENT CASE: A massive supply chain attack has paralyzed thousands of businesses globally. The attack didn't start at the victims' offices—it came from their IT management software.
+
+We have recovered a binary dropped on a victim's server. Your orders are to analyze the evidence, identify the exploit used, and find the decryption key to save the victims.
+
+EVIDENCE HASH (SHA256): d55f983c994caa160ec63a59f6b4250fe67fb3e8c43a388aec60a4a6978e9f1e
+

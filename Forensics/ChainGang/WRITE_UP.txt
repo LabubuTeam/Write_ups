@@ -1,0 +1,119 @@
+As we can see the question gave us a 256-hash
+
+EVIDENCE HASH (SHA256): d55f983c994caa160ec63a59f6b4250fe67fb3e8c43a388aec60a4a6978e9f1e
+
+
+We can anlyse this artifact using Virus Total by enteritng the hash on the search bar
+
+Officer, Identify the Malware Family.
+
+
+we should look at the family labels
+
+
+
+PHOTO(1)
+
+
+
+answer: sodinokibi
+
+
+
+This attack propagated via a malicious update from a legitimate IT management vendor. What is the Name of the Company whose software was exploited?
+
+
+By doing a quick google serch we will know what was the neame of the comapny
+
+PHOTO(2)
+
+answer: Kaseya
+
+
+Forensics shows the malware side-loaded a malicious DLL using a legitimate Microsoft executable to bypass Defender. What is the filename of that legitimate executable?
+
+
+When we go to the Reltations Tab we should go to see the PE Resource Children
+
+And we will find to files
+
+photo(3)
+
+
+wich are
+
+MsMpEng.exe
+e2a24ab94f865caeacdf2c3ad015f31f23008ac6db8312c2cbfb32e4a5466ea2.dll
+
+
+and since we want a an excauble file
+
+we will go with MsMpEng.exe
+
+
+Note: PE stands for Portable Executable — the file format used for .exe, .dll, .sys, and other executable files on Windows. Resource Children refers to embedded resources inside that PE file (icons, images, strings, configuration data, other executables, etc.).
+
+
+
+Intelligence confirms they used an Authentication Bypass Zero-Day. What is the CVE ID assigned to this specific vulnerability?
+
+By doing a fast google search we can easly find that the solution is CVE-2021-30116
+
+
+
+The gang demanded a record-breaking lump sum to unlock all victims at once. According to news reports, what was the highest amount (in Millions) demanded?
+
+
+By doing a google search "Kaseya company lump sum in millions CVE-2021-30116"
+
+
+The REvil ransomware group has demanded a $70 million payment to provide a universal decryptor tool to unlock the files corrupted by REvil ransomware.
+
+
+answer: 70
+
+
+Final Task. A 'Universal Master Decryptor Key' was eventually obtained. Provide the first 8 characters of that key.
+
+
+For the last question it was easeir to ask gemni or any other ai about it and the full key is "OgTD7co7NcYCoNj8NoYdPoR8nVFJBO5vs/kVkhelp2s="
+
+OgTD7co7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
