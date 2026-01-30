@@ -58,12 +58,23 @@ then rtp and after the that to rtp streams
 
 
 <img width="1920" height="1080" alt="Screenshot_20260130_040934" src="https://github.com/user-attachments/assets/ee716327-749b-4a6f-8d50-8cdfbc319555" />
-
-And then we play the audio 
+ 
 
 <img width="1920" height="1080" alt="Screenshot_20260130_041147" src="https://github.com/user-attachments/assets/34a8ac88-0014-4df5-b50e-1d03a2239eb0" />
 
 
 and then we play the audio 
 
+https://github.com/LabubuTeam/Write_ups/blob/main/Forensics/%D8%B5%D8%AD%D8%A9_%D9%88%D8%B9%D8%A7%D9%81%D9%8A%D8%A9/Record%20(online-voice-recorder.com).mp3
 
+we can see that there vocies that indecate a hidden message 
+
+
+and we wil use audcity for it we will put the same audio on audacity or wavacity
+
+
+<img width="1920" height="1067" alt="Screenshot_20260130_042920" src="https://github.com/user-attachments/assets/ec926c57-963f-4acd-b879-5bb081b5ef70" />
+
+We need to make sure that it is on spectogram 
+
+and the we can see the flag but using audaicty we will be better the using wavecity bacecuse we can see the flag easily 
